@@ -117,9 +117,13 @@ jobs:
   - name: project1-project2-integration
     queue-name: integration
   - name: mutex-one
-    mutex: test-mutex
+    mutex: test-semaphore
   - name: mutex-two
-    mutex: test-mutex
+    semaphore: test-semaphore
+  - name: project1-merge
+    tags:
+      - project1
+      - extratag
 
 project-templates:
   - name: test-one-and-two
